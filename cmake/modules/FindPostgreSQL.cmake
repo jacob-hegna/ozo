@@ -180,7 +180,7 @@ else()
   mark_as_advanced(PostgreSQL_LIBRARY_RELEASE PostgreSQL_LIBRARY_DEBUG)
 endif()
 list(GET PostgreSQL_LIBRARY 0 PostgreSQL_LIBRARY_FIRST)
-get_filename_component(PostgreSQL_LIBRARY_DIR ${PostgreSQL_LIBRARY} PATH)
+get_filename_component(PostgreSQL_LIBRARY_DIR ${PostgreSQL_LIBRARY_FIRST} PATH)
 
 if (PostgreSQL_INCLUDE_DIR)
   # Some platforms include multiple pg_config.hs for multi-lib configurations
