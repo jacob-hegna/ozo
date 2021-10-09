@@ -179,6 +179,7 @@ else()
   select_library_configurations(PostgreSQL)
   mark_as_advanced(PostgreSQL_LIBRARY_RELEASE PostgreSQL_LIBRARY_DEBUG)
 endif()
+list(GET PostgreSQL_LIBRARY 0 PostgreSQL_LIBRARY_FIRST)
 get_filename_component(PostgreSQL_LIBRARY_DIR ${PostgreSQL_LIBRARY} PATH)
 
 if (PostgreSQL_INCLUDE_DIR)
